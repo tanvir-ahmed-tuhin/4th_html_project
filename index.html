@@ -1,0 +1,498 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tanvir | Creative Space</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f9ff;
+    color: #192440;
+}
+
+header {
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+}
+
+.logo {
+    font-size: 25px;
+    color: #7755f9;
+}
+
+nav a {
+    text-decoration: none;
+    color: #253454;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #7755f9;
+}
+
+.hero {
+    padding: 85px 9%;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: linear-gradient(120deg, #f1efff, #e5f6ff);
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero small {
+    font-size: 19px;
+    color: #596785;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin: 18px 0;
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: #7755f9;
+}
+
+.hero p {
+    color: #586783;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 13px 20px;
+    border-radius: 25px;
+    background: linear-gradient(90deg, #8b5cf6, #278cff);
+    color: white;
+    margin: 5px 5px 5px 0;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-light {
+    background: white;
+    color: #6950ec;
+    border: 1px solid #a7a2ff;
+}
+
+.art {
+    flex: 1;
+    min-height: 260px;
+    border-radius: 45% 45% 20% 20%;
+    background: linear-gradient(
+        160deg, #f9c9df, #a9caff, #343e78
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.art div {
+    background: #ffffffcc;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.art h2 {
+    color: #7755f9;
+    font-size: 30px;
+}
+
+section {
+    padding: 65px 9%;
+}
+
+.heading {
+    margin-bottom: 30px;
+}
+
+.heading small {
+    color: #7755f9;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.heading h2 {
+    font-size: 32px;
+    margin-top: 10px;
+}
+
+.about {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+    background: white;
+}
+
+.about-art {
+    min-width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, #d8caff, #b8e8ff);
+    border-radius: 25px;
+    display: grid;
+    place-items: center;
+    font-size: 55px;
+}
+
+.about-text p {
+    color: #586783;
+    line-height: 1.8;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.info span {
+    padding: 10px 13px;
+    background: #f0efff;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit, minmax(140px, 1fr)
+    );
+    gap: 18px;
+}
+
+.skill {
+    background: white;
+    padding: 25px 15px;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px #29376b0d;
+    border: 1px solid #ecebff;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-6px);
+    border-color: #a99aff;
+}
+
+.skill .emoji {
+    font-size: 35px;
+}
+
+.skill h3 {
+    margin: 13px 0 8px;
+}
+
+.skill p {
+    font-size: 13px;
+    color: #687590;
+}
+
+.project-section {
+    background: white;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit, minmax(220px, 1fr)
+    );
+    gap: 20px;
+}
+
+.project {
+    border: 1px solid #e3e5fa;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #fff;
+    transition: 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px #4f46e51a;
+}
+
+.project-art {
+    min-height: 120px;
+    display: grid;
+    place-items: center;
+    font-size: 45px;
+    background: linear-gradient(135deg, #e9ddff, #d9f4ff);
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info p {
+    color: #687590;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 10px 0;
+}
+
+.project-info a {
+    color: #7755f9;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.contact {
+    background: linear-gradient(120deg, #202747, #353365);
+    color: white;
+    text-align: center;
+}
+
+.contact p {
+    color: #d4d9f4;
+    margin: 18px 0;
+    line-height: 1.8;
+}
+
+footer {
+    background: #171d35;
+    color: #c4cce4;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+}
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 60px 7%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .art {
+        min-height: 210px;
+    }
+
+    section {
+        padding: 50px 7%;
+    }
+
+    .about {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2 class="logo">&lt;/&gt; Tanvir</h2>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <small>Hey, I'm 👋</small>
+
+        <h1><span>Tanvir</span> Ahmed Tuhin</h1>
+
+        <p>
+            CST Student | Flutter Developer | Future Full-Stack Developer
+        </p>
+
+        <p>
+            I love coding, building mobile apps, creating web projects
+            and exploring new technologies. Let's build something amazing!
+        </p>
+
+        <a href="#projects" class="btn">View Projects →</a>
+        <a href="#contact" class="btn btn-light">Contact Me</a>
+    </div>
+
+    <div class="art">
+        <div>
+            <h2>Dream. Code.</h2>
+            <p>Build Something Amazing ✨</p>
+            <p>Better Code, Better Tomorrow</p>
+        </div>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <div class="about-art">👨‍💻</div>
+
+    <div class="about-text">
+        <div class="heading">
+            <small>ABOUT ME</small>
+            <h2>Who Am I?</h2>
+        </div>
+
+        <p>
+            I am Tanvir Ahmed Tuhin, a Computer Science student
+            interested in programming, web development and mobile apps.
+            I enjoy learning new technologies and building useful projects.
+            My goal is to become a skilled full-stack developer.
+        </p>
+
+        <div class="info">
+            <span>🎓 CST Student</span>
+            <span>📱 Flutter</span>
+            <span>💻 Developer in Progress</span>
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+    <div class="heading">
+        <small>MY SKILLS</small>
+        <h2>Things I Work With</h2>
+    </div>
+
+    <div class="skills">
+        <div class="skill">
+            <div class="emoji">📱</div>
+            <h3>Flutter</h3>
+            <p>Mobile Apps</p>
+        </div>
+
+        <div class="skill">
+            <div class="emoji">🌐</div>
+            <h3>HTML</h3>
+            <p>Web Structure</p>
+        </div>
+
+        <div class="skill">
+            <div class="emoji">🎨</div>
+            <h3>CSS</h3>
+            <p>Web Design</p>
+        </div>
+
+        <div class="skill">
+            <div class="emoji">⚡</div>
+            <h3>JavaScript</h3>
+            <p>Interactivity</p>
+        </div>
+
+        <div class="skill">
+            <div class="emoji">🔥</div>
+            <h3>Firebase</h3>
+            <p>App Backend</p>
+        </div>
+
+        <div class="skill">
+            <div class="emoji">🐙</div>
+            <h3>GitHub</h3>
+            <p>Code Management</p>
+        </div>
+    </div>
+</section>
+
+<section class="project-section" id="projects">
+    <div class="heading">
+        <small>MY WORK</small>
+        <h2>Featured Projects</h2>
+    </div>
+
+    <div class="projects">
+        <div class="project">
+            <div class="project-art">🛵</div>
+            <div class="project-info">
+                <h3>Food Delivery App</h3>
+                <p>A mobile app concept for ordering food online.</p>
+                <a href="#contact">View Project ↗</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-art">💻</div>
+            <div class="project-info">
+                <h3>Portfolio Website</h3>
+                <p>A personal website built with HTML and CSS.</p>
+                <a href="#home">View Project ↗</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-art">📝</div>
+            <div class="project-info">
+                <h3>Notes App</h3>
+                <p>A simple concept for saving and organizing notes.</p>
+                <a href="#contact">View Project ↗</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <div class="heading">
+        <small>GET IN TOUCH</small>
+        <h2>Let's Create Something Great!</h2>
+    </div>
+
+    <p>
+        Have an idea or want to talk about technology?
+        Feel free to contact me.
+    </p>
+
+    <a href="mailto:your-email@example.com" class="btn">
+        Say Hello! ✉
+    </a>
+</section>
+
+<footer>
+    <p>© 2026 Tanvir Ahmed Tuhin | Built with HTML & CSS 💜</p>
+</footer>
+
+</body>
+</html>
